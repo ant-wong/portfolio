@@ -7,4 +7,5 @@ Creating a portfolio page to showcase personal information such as background, s
 ### Technology
 - React
 - SASS
-- CSS animations
+- CSS grid/animations
+- Materialize
