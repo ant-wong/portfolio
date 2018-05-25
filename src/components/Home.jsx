@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import profile from '../img/profilepic.jpg'
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="container aboutBody">
+        <div className="container-fluid aboutBody">
           <div className="row">
-            <div className="col l7 xs12">
+            <div className="col-lg-7 col-xs-6">
               <div className="message">
                 <h3>About me.</h3>
                   <p>
@@ -28,24 +27,11 @@ export default class Home extends Component {
                   </p>
               </div>
             </div>
-            <div className="col l5 xs12">
-              <img src={profile} alt="Profile picture." className="profilePic"/>
+            <div className="col-lg-5 col-xs-6">
+              <img src={profile} alt="Profile." className="profilePic"/>
             </div>
           </div>
         </div>
-       
-        {/* <Link to="/skills" className="link">
-          <div>
-            test
-            <div className="btn-floating btn-small menuIcons"></div>
-          </div>
-        </Link>
-        <Link to="/contact" className="link">
-          <div>
-            test 2
-            <div className="btn-floating btn-small menuIcons"></div>
-          </div>
-        </Link> */}
       </div>
     )
   }
