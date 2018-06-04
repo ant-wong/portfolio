@@ -3,10 +3,11 @@ import { Switch, Route } from 'react-router-dom'
 
 import './styles/theme.css'
 import './styles/animations.css'
-import Nav from './components/Navbar'
+import Navbar from './components/Navbar'
 import Home from './components/Home'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
+// import Skills from './components/Skills'
+// import Contact from './components/Contact'
+import NotFound from './components/404'
 import Footer from './components/Footer'
 
 class App extends Component {
@@ -14,18 +15,21 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Nav />
+        <Navbar />
+
         <Switch>
           <Route exact path="/" render={() => {
             return <Home />
           }} />
-          <Route path="/skills" render={() => {
+          {/* <Route path="/skills" render={() => {
             return <Skills />
           }} />
           <Route path="/contact" render={() => {
             return <Contact />
-          }} />
+          }} /> */}
+          <Route path="*" component={NotFound} />
         </Switch>
+
         <Footer />
 
       </div>
